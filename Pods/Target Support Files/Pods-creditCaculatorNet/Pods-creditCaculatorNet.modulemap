@@ -1,0 +1,6 @@
+framework module Pods_creditCaculatorNet {
+  umbrella header "Pods-creditCaculatorNet-umbrella.h"
+
+  export *
+  module * { export * }
+}

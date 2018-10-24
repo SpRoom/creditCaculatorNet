@@ -1,0 +1,6 @@
+framework module SNSwiftPackage {
+  umbrella header "SNSwiftPackage-umbrella.h"
+
+  export *
+  module * { export * }
+}
