@@ -61,7 +61,7 @@ extension Response {
             return SNMoyaResult.login
         }
         
-        guard model.code == "0" else {
+        guard model.code == SNAPIConfig.success_code else {
             return SNMoyaResult.fail(code: model.code, msg: model.msg)
         }
         return SNMoyaResult.bool(msg: model.msg)

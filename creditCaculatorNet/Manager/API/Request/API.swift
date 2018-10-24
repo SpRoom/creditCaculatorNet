@@ -21,6 +21,7 @@ enum APIExp {
     case changePassord(username: String, password: String, newPassword: String)
     case exit
     case bills
+    case addLoan(name: String,lines: Int,reimsementDate:Int,borrowDate:TimeInterval,instaments: String)
 }
 
 extension APIExp : JSONMappableTargetType {
@@ -45,6 +46,8 @@ extension APIExp : JSONMappableTargetType {
             return "/api/v1/exit"
         case .bills:
             return "/api/v1/bill/bills"
+        case .addLoan:
+            return "/api/v1/loan/addLoan"
         }
     }
 
@@ -150,6 +153,8 @@ extension APIExp {
                             para[key] = val1
                         } else if let val1 = val as? Int {
                         print("--- parameter =  nil")
+                            para[key] = val1
+                        } else if let val1 = val as? TimeInterval {
                             para[key] = val1
                         } else {
 //                        para[key] = val

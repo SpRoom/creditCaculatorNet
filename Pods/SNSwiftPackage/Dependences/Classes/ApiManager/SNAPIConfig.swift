@@ -16,6 +16,10 @@ public class SNAPIConfig {
     private(set) static var MOYA_RESULT_DATA = "data"
     private(set) static var MOYA_RESULT_SUCCESS_CODE = "1000"
     
+    public static var success_code : String {
+        return MOYA_RESULT_SUCCESS_CODE
+    }
+    
     public static var tokenAuth = ""
     
     public static func configKeyMoyaResultCode(_ str: String) {

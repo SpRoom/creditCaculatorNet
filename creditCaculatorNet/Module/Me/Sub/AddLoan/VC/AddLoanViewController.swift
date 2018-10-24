@@ -18,7 +18,7 @@ class AddLoanViewController: SNBaseViewController {
     let borrowDateV = AuthTitleInputView()
     let instalmentAmountV = AuthTitleInputView()
     
-    let checkBtn = UIButton().then {
+    let checkBtn = BGButton().then {
         $0.setTitle("确认", for: .normal)
         $0.setTitleColor(.black, for: .normal)
     }

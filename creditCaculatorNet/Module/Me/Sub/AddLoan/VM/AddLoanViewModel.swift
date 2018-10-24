@@ -9,6 +9,9 @@
 import UIKit
 import RxCocoa
 import SNSwiftPackage
+import SwiftDate
+
+
 class AddLoanViewModel: SNBaseViewModel {
 
     let nameRep = BehaviorRelay(value: "")
@@ -44,8 +47,27 @@ extension AddLoanViewModel {
             return
         }
         
+        let region = Region(calendar: Calendars.chinese, zone: Zones.asiaShanghai, locale: Locales.chinese)
+    
+        guard let date = dateFor(string: borrowStr, format: "yyyyMMdd") else {
+            SNLog("借款日不能为空")
+            return
+        }
         
+        let borrowTimeInterval = date.timeIntervalSince1970
         
+        APIRequestBool(requestType: APIExp.addLoan(name: nameStr, lines: Int(totalD*100), reimsementDate: reimseI, borrowDate: borrowTimeInterval, instaments: instalmentStr)).subscribe(onNext: { (result) in
+            switch result {
+            case .bool(msg: let msg):
+                break
+            case .fail(code: let code, msg: let msg):
+                self.netFailDeailWith(code: code, msg: msg, callBack: nil)
+            default:
+                break
+            }
+        }, onError: { (e) in
+            self.netErrorDealwith(e: e)
+        }).disposed(by: disposeBag)
         
     }
     
