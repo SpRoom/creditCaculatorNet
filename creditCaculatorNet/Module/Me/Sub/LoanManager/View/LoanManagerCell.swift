@@ -11,18 +11,21 @@ import SNSwiftPackage
 
 class LoanManagerCell: SNBaseTableViewCell {
     
+    /// 贷款名
     let nameL = UILabel().then {
         $0.font = Font(28)
     }
     
+    /// 本金
     let principayL = UILabel().then {
         $0.font = Font(28)
     }
     
+    /// 还款日 每月的某天
     let reimbursementL = UILabel().then {
         $0.font = Font(28)
     }
-    
+    // 当前还款金额
     let currentReimbursementValueL = UILabel().then {
         $0.font = Font(28)
     }
@@ -57,6 +60,13 @@ extension LoanManagerCell {
         }
     }
     
+    /// 设置参数
+    ///
+    /// - Parameters:
+    ///   - name: 贷款名
+    ///   - principay: 本金
+    ///   - reimbursment: 还款日
+    ///   - currentReimbursmentValue: 本期还款金额
     func set(name: String, principay: String, reimbursment: String, currentReimbursmentValue: String) {
         self.nameL.text = name
         self.principayL.text = principay

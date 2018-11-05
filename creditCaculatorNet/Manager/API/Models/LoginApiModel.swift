@@ -12,6 +12,7 @@ import SwiftyJSON
 
 struct LoginApiModel: SNSwiftyJSONAble {
     
+    /// token
     var token: String
     
      init?(jsonData: JSON) {

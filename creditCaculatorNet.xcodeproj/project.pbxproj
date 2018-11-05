@@ -11,6 +11,10 @@
 		76119B4B218027C400AE56B8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76119B4A218027C400AE56B8 /* APIManager.swift */; };
 		76119B4D218045FA00AE56B8 /* ViewMdoelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76119B4C218045F900AE56B8 /* ViewMdoelExtension.swift */; };
 		76119B4F21804A3E00AE56B8 /* BillsApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76119B4E21804A3E00AE56B8 /* BillsApiModel.swift */; };
+		7615F44E21816F340055A093 /* LoanApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615F44D21816F340055A093 /* LoanApiModel.swift */; };
+		7615F4512181749F0055A093 /* AddCreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615F4502181749F0055A093 /* AddCreditCardViewModel.swift */; };
+		7615F45321817B400055A093 /* IDNameApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615F45221817B400055A093 /* IDNameApiModel.swift */; };
+		761A9DD82187FE82005E5DD8 /* TitleTapSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A9DD72187FE82005E5DD8 /* TitleTapSelectView.swift */; };
 		76B169F8217D803D007B7769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B169F7217D803D007B7769 /* AppDelegate.swift */; };
 		76B169FA217D803D007B7769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B169F9217D803D007B7769 /* ViewController.swift */; };
 		76B169FD217D803D007B7769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B169FB217D803D007B7769 /* Main.storyboard */; };
@@ -112,6 +116,10 @@
 		76119B4A218027C400AE56B8 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		76119B4C218045F900AE56B8 /* ViewMdoelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMdoelExtension.swift; sourceTree = "<group>"; };
 		76119B4E21804A3E00AE56B8 /* BillsApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsApiModel.swift; sourceTree = "<group>"; };
+		7615F44D21816F340055A093 /* LoanApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanApiModel.swift; sourceTree = "<group>"; };
+		7615F4502181749F0055A093 /* AddCreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewModel.swift; sourceTree = "<group>"; };
+		7615F45221817B400055A093 /* IDNameApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNameApiModel.swift; sourceTree = "<group>"; };
+		761A9DD72187FE82005E5DD8 /* TitleTapSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTapSelectView.swift; sourceTree = "<group>"; };
 		76B169F4217D803D007B7769 /* creditCaculatorNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = creditCaculatorNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B169F7217D803D007B7769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B169F9217D803D007B7769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +244,14 @@
 				76119B48218027BF00AE56B8 /* API.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		7615F44F218174890055A093 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				7615F4502181749F0055A093 /* AddCreditCardViewModel.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		76B169EB217D803D007B7769 = {
@@ -745,6 +761,7 @@
 		76B16AB5217DA397007B7769 /* AddCreditCard */ = {
 			isa = PBXGroup;
 			children = (
+				7615F44F218174890055A093 /* VM */,
 				76B16AB6217DA397007B7769 /* VC */,
 				76B16AB8217DA397007B7769 /* View */,
 			);
@@ -762,6 +779,7 @@
 		76B16AB8217DA397007B7769 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				761A9DD72187FE82005E5DD8 /* TitleTapSelectView.swift */,
 				76B16AB9217DA397007B7769 /* AuthTitleInputView.swift */,
 			);
 			path = View;
@@ -949,6 +967,8 @@
 			children = (
 				76B16AFD217DD1B0007B7769 /* LoginApiModel.swift */,
 				76119B4E21804A3E00AE56B8 /* BillsApiModel.swift */,
+				7615F44D21816F340055A093 /* LoanApiModel.swift */,
+				7615F45221817B400055A093 /* IDNameApiModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1136,6 +1156,7 @@
 				76B16AD7217DA397007B7769 /* AddLoanViewModel.swift in Sources */,
 				76B16AF8217DCA1E007B7769 /* BGButton.swift in Sources */,
 				76B16A80217DA36A007B7769 /* PhoneCodeCell.swift in Sources */,
+				7615F4512181749F0055A093 /* AddCreditCardViewModel.swift in Sources */,
 				76B16A74217DA36A007B7769 /* UIApplication+Extensions.swift in Sources */,
 				76119B4F21804A3E00AE56B8 /* BillsApiModel.swift in Sources */,
 				76B16A84217DA36A007B7769 /* OneTextFieldViewController.swift in Sources */,
@@ -1150,6 +1171,7 @@
 				76B16AE5217DA397007B7769 /* MeViewController.swift in Sources */,
 				76B16A92217DA36A007B7769 /* DatePickerViewController.swift in Sources */,
 				76B16A91217DA36A007B7769 /* ColorPickerViewController.swift in Sources */,
+				761A9DD82187FE82005E5DD8 /* TitleTapSelectView.swift in Sources */,
 				76B16A6A217DA36A007B7769 /* UISegmentedControl+Extensions.swift in Sources */,
 				76B16AE2217DA397007B7769 /* CreditManagerItem.swift in Sources */,
 				76B16A8E217DA36A007B7769 /* Contacts.swift in Sources */,
@@ -1171,6 +1193,7 @@
 				76B16A66217DA36A007B7769 /* HLFNavigationController.swift in Sources */,
 				76B16A93217DA36A007B7769 /* ImagePickerViewController.swift in Sources */,
 				76B16A95217DA36A007B7769 /* PhotoLayout.swift in Sources */,
+				7615F45321817B400055A093 /* IDNameApiModel.swift in Sources */,
 				76B16AD6217DA397007B7769 /* ConsumptionViewController.swift in Sources */,
 				76B16A98217DA36A007B7769 /* LikeButtonCell.swift in Sources */,
 				76119B4D218045FA00AE56B8 /* ViewMdoelExtension.swift in Sources */,
@@ -1184,6 +1207,7 @@
 				76B16A9D217DA36A007B7769 /* Button.swift in Sources */,
 				76B16A73217DA36A007B7769 /* UISearchBar+Extensions.swift in Sources */,
 				76B16AED217DC841007B7769 /* AppServer.swift in Sources */,
+				7615F44E21816F340055A093 /* LoanApiModel.swift in Sources */,
 				76B16A71217DA36A007B7769 /* UIColor+Extensions.swift in Sources */,
 				76B16A99217DA36A007B7769 /* Label.swift in Sources */,
 				76B16A72217DA36A007B7769 /* UIImage+Extensions.swift in Sources */,

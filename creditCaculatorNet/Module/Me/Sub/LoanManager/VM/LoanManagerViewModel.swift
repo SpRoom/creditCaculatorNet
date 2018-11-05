@@ -25,6 +25,18 @@ extension LoanManagerViewModel {
     
     func loans() {
         
+        APIRequest(requestType: APIExp.loans, modelType: [LoanApiModel.self]).subscribe(onNext: { (result) in
+            switch result {
+            case .success(let model):
+                self.parseLoans(models: model)
+            case .fail(code: let code, msg: let msg):
+                self.netFailDeailWith(code: code, msg: msg, callBack: nil)
+            default:
+                break
+            }
+        }, onError: { (e) in
+            self.netErrorDealwith(e: e)
+        }).disposed(by: disposeBag)
 
     }
     
@@ -35,10 +47,25 @@ extension LoanManagerViewModel {
 
 extension LoanManagerViewModel {
     
-//    func mapLoanItem(model: Loan) -> LoanManagerItem {
-//        
-//        let item = LoanManagerItem(name: model.name, principal: "\(model.principal)", reimbursement: "\(model.reimsement)", currentReimburValue: "0", id: model.id)
-//        
-//        return item
-//    }
+    func parseLoans(models: [LoanApiModel]) {
+        
+        let items = models.map(mapLoanItem)
+        
+        sectionRep1 <= [
+            TableSectionModel(title: "", items: items)
+        ]
+    }
+}
+
+extension LoanManagerViewModel {
+    
+    func mapLoanItem(model: LoanApiModel) -> LoanManagerItem {
+        
+        let reimsementValue = pointToYuan(value: model.reimsementValue)
+        let principay = pointToYuan(value: model.principay)
+        
+        let item = LoanManagerItem(name: model.name, principal: principay, reimbursement: "\(model.reimsementDate)", currentReimburValue: reimsementValue, id: model.id)
+        
+        return item
+    }
 }

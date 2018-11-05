@@ -59,7 +59,7 @@ extension AddLoanViewModel {
         APIRequestBool(requestType: APIExp.addLoan(name: nameStr, lines: Int(totalD*100), reimsementDate: reimseI, borrowDate: borrowTimeInterval, instaments: instalmentStr)).subscribe(onNext: { (result) in
             switch result {
             case .bool(msg: let msg):
-                break
+                SZHUD(msg, type: .success, callBack: nil)
             case .fail(code: let code, msg: let msg):
                 self.netFailDeailWith(code: code, msg: msg, callBack: nil)
             default:

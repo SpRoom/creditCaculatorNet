@@ -64,7 +64,8 @@ extension MeViewController {
         }
         
         if name == "月账单统计" {
-            
+            self.vmodel.logOut()
+        
         }
     }
 }

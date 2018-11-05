@@ -75,4 +75,29 @@ extension SNBaseViewModel {
     }
     
     
+    func logOut() {
+        
+        Singleton.shared.token = nil
+        
+        Singleton.shared.refreshToken()
+        
+        let window = UIApplication.shared.keyWindow
+        
+        //        let rootVC = SNMainTabBarController.shared
+        //        rootVC.modalTransitionStyle = .crossDissolve
+        
+        let animation = {
+            let oldState = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            let vc = LoginViewController()
+            window?.rootViewController = vc
+            UIView.setAnimationsEnabled(oldState)
+        }
+        
+        UIView.transition(with: window!, duration: 0.5, options: .transitionCurlUp, animations: animation, completion: nil)
+        
+        jumpSubject.onNext((nil,.popToRoot))
+        //        jumpSubject.onNext((vc,.present))
+    }
+    
 }

@@ -21,7 +21,7 @@ extension LoginViewModel {
     func loginSuccess(model: LoginApiModel? = nil) {
         
 //        Singleton.shared.token = model.token
-        Singleton.shared.token = "TrfDX8cCPSsK6jCt_3mlG4NUDene1KZewSRbHDNm9RY"
+        Singleton.shared.token = "66UXJBkuwSs1t1_6yrTZH1CgMFSqhuu-hKInLwcaG5Y"
         Singleton.shared.refreshToken()
         
         let window = UIApplication.shared.keyWindow
