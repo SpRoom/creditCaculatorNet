@@ -79,7 +79,7 @@ extension CreditManagerViewController{
     
     func editCredit(id: Int) {
         let vc = ModifyCreditViewController()
-        vc.setValue(id, forKey: "id")
+        vc.set(id: id)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

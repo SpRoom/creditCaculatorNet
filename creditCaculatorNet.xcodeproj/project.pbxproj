@@ -15,6 +15,7 @@
 		7615F4512181749F0055A093 /* AddCreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615F4502181749F0055A093 /* AddCreditCardViewModel.swift */; };
 		7615F45321817B400055A093 /* IDNameApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615F45221817B400055A093 /* IDNameApiModel.swift */; };
 		761A9DD82187FE82005E5DD8 /* TitleTapSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A9DD72187FE82005E5DD8 /* TitleTapSelectView.swift */; };
+		76A4A9F521902A2600548B9D /* accountApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4A9F421902A2600548B9D /* accountApiModel.swift */; };
 		76B169F8217D803D007B7769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B169F7217D803D007B7769 /* AppDelegate.swift */; };
 		76B169FA217D803D007B7769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B169F9217D803D007B7769 /* ViewController.swift */; };
 		76B169FD217D803D007B7769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B169FB217D803D007B7769 /* Main.storyboard */; };
@@ -106,6 +107,8 @@
 		76B16AF8217DCA1E007B7769 /* BGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AF7217DCA1E007B7769 /* BGButton.swift */; };
 		76B16AFB217DD139007B7769 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AFA217DD139007B7769 /* LoginViewModel.swift */; };
 		76B16AFE217DD1B0007B7769 /* LoginApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AFD217DD1B0007B7769 /* LoginApiModel.swift */; };
+		76BCA0AC21928B0200001145 /* ModifyCreditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */; };
+		76BCA0B121929D1800001145 /* accountInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0B021929D1800001145 /* accountInfoApiModel.swift */; };
 		8987201E792190A82DDD96A9 /* Pods_creditCaculatorNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +123,7 @@
 		7615F4502181749F0055A093 /* AddCreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewModel.swift; sourceTree = "<group>"; };
 		7615F45221817B400055A093 /* IDNameApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNameApiModel.swift; sourceTree = "<group>"; };
 		761A9DD72187FE82005E5DD8 /* TitleTapSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTapSelectView.swift; sourceTree = "<group>"; };
+		76A4A9F421902A2600548B9D /* accountApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountApiModel.swift; sourceTree = "<group>"; };
 		76B169F4217D803D007B7769 /* creditCaculatorNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = creditCaculatorNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B169F7217D803D007B7769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B169F9217D803D007B7769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 		76B16AF7217DCA1E007B7769 /* BGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGButton.swift; sourceTree = "<group>"; };
 		76B16AFA217DD139007B7769 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		76B16AFD217DD1B0007B7769 /* LoginApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiModel.swift; sourceTree = "<group>"; };
+		76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyCreditViewModel.swift; sourceTree = "<group>"; };
+		76BCA0B021929D1800001145 /* accountInfoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfoApiModel.swift; sourceTree = "<group>"; };
 		FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_creditCaculatorNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -788,6 +794,7 @@
 		76B16ABA217DA397007B7769 /* ModifyCreditCard */ = {
 			isa = PBXGroup;
 			children = (
+				76BCA0AA21928AE000001145 /* ViewModel */,
 				76B16ABB217DA397007B7769 /* VC */,
 			);
 			path = ModifyCreditCard;
@@ -969,8 +976,18 @@
 				76119B4E21804A3E00AE56B8 /* BillsApiModel.swift */,
 				7615F44D21816F340055A093 /* LoanApiModel.swift */,
 				7615F45221817B400055A093 /* IDNameApiModel.swift */,
+				76A4A9F421902A2600548B9D /* accountApiModel.swift */,
+				76BCA0B021929D1800001145 /* accountInfoApiModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		76BCA0AA21928AE000001145 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F86B952DFE854358961E4AE4 /* Frameworks */ = {
@@ -1170,7 +1187,9 @@
 				76B16A67217DA36A007B7769 /* SNMainTabBarController.swift in Sources */,
 				76B16AE5217DA397007B7769 /* MeViewController.swift in Sources */,
 				76B16A92217DA36A007B7769 /* DatePickerViewController.swift in Sources */,
+				76A4A9F521902A2600548B9D /* accountApiModel.swift in Sources */,
 				76B16A91217DA36A007B7769 /* ColorPickerViewController.swift in Sources */,
+				76BCA0AC21928B0200001145 /* ModifyCreditViewModel.swift in Sources */,
 				761A9DD82187FE82005E5DD8 /* TitleTapSelectView.swift in Sources */,
 				76B16A6A217DA36A007B7769 /* UISegmentedControl+Extensions.swift in Sources */,
 				76B16AE2217DA397007B7769 /* CreditManagerItem.swift in Sources */,
@@ -1186,6 +1205,7 @@
 				76B16A9B217DA36A007B7769 /* GradientSlider.swift in Sources */,
 				76B16AE6217DA397007B7769 /* MeItem.swift in Sources */,
 				76B16A83217DA36A007B7769 /* TwoTextFieldsViewController.swift in Sources */,
+				76BCA0B121929D1800001145 /* accountInfoApiModel.swift in Sources */,
 				76B16A96217DA36A007B7769 /* TelegramPickerViewController.swift in Sources */,
 				76B16A79217DA36A007B7769 /* UITextField+Extensions.swift in Sources */,
 				76B16A90217DA36A007B7769 /* ContactCell.swift in Sources */,
