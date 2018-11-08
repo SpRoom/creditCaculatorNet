@@ -109,6 +109,14 @@
 		76B16AFE217DD1B0007B7769 /* LoginApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AFD217DD1B0007B7769 /* LoginApiModel.swift */; };
 		76BCA0AC21928B0200001145 /* ModifyCreditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */; };
 		76BCA0B121929D1800001145 /* accountInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0B021929D1800001145 /* accountInfoApiModel.swift */; };
+		76BCA0B821940C7B00001145 /* ConsumptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0B721940C7B00001145 /* ConsumptionViewModel.swift */; };
+		76BCA0BB21940EB800001145 /* ConsumptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0BA21940EB800001145 /* ConsumptionTableViewCell.swift */; };
+		76BCA0BF219416C100001145 /* consumptionCreditApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0BE219416C100001145 /* consumptionCreditApiModel.swift */; };
+		76BCA0C7219419C000001145 /* AddMonthBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0C6219419C000001145 /* AddMonthBillViewController.swift */; };
+		76BCA0C921942EC000001145 /* AddMonthBillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0C821942EC000001145 /* AddMonthBillViewModel.swift */; };
+		76BCA0CB21943A6500001145 /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0CA21943A6500001145 /* String_Extension.swift */; };
+		76BCA0CE21943C0600001145 /* ConsumptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0CD21943C0600001145 /* ConsumptionItem.swift */; };
+		76BCA0D021943D7F00001145 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA0CF21943D7F00001145 /* StringExtensions.swift */; };
 		8987201E792190A82DDD96A9 /* Pods_creditCaculatorNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +227,14 @@
 		76B16AFD217DD1B0007B7769 /* LoginApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiModel.swift; sourceTree = "<group>"; };
 		76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyCreditViewModel.swift; sourceTree = "<group>"; };
 		76BCA0B021929D1800001145 /* accountInfoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfoApiModel.swift; sourceTree = "<group>"; };
+		76BCA0B721940C7B00001145 /* ConsumptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewModel.swift; sourceTree = "<group>"; };
+		76BCA0BA21940EB800001145 /* ConsumptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionTableViewCell.swift; sourceTree = "<group>"; };
+		76BCA0BE219416C100001145 /* consumptionCreditApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consumptionCreditApiModel.swift; sourceTree = "<group>"; };
+		76BCA0C6219419C000001145 /* AddMonthBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMonthBillViewController.swift; sourceTree = "<group>"; };
+		76BCA0C821942EC000001145 /* AddMonthBillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMonthBillViewModel.swift; sourceTree = "<group>"; };
+		76BCA0CA21943A6500001145 /* String_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
+		76BCA0CD21943C0600001145 /* ConsumptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionItem.swift; sourceTree = "<group>"; };
+		76BCA0CF21943D7F00001145 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_creditCaculatorNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -325,6 +341,8 @@
 		76B16A0C217DA349007B7769 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				76BCA0CF21943D7F00001145 /* StringExtensions.swift */,
+				76BCA0CA21943A6500001145 /* String_Extension.swift */,
 				76B16A12217DA369007B7769 /* AlertPickers */,
 				76B16A10217DA369007B7769 /* Rx */,
 				76B16A0D217DA369007B7769 /* Base */,
@@ -643,6 +661,10 @@
 		76B16AA0217DA396007B7769 /* Consumption */ = {
 			isa = PBXGroup;
 			children = (
+				76BCA0CC21943BEE00001145 /* Model */,
+				76BCA0C1219418C600001145 /* Sub */,
+				76BCA0B921940E8E00001145 /* View */,
+				76BCA0B621940C6500001145 /* VM */,
 				76B16AA1217DA396007B7769 /* VC */,
 			);
 			path = Consumption;
@@ -978,6 +1000,7 @@
 				7615F45221817B400055A093 /* IDNameApiModel.swift */,
 				76A4A9F421902A2600548B9D /* accountApiModel.swift */,
 				76BCA0B021929D1800001145 /* accountInfoApiModel.swift */,
+				76BCA0BE219416C100001145 /* consumptionCreditApiModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -988,6 +1011,71 @@
 				76BCA0AB21928B0100001145 /* ModifyCreditViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76BCA0B621940C6500001145 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0B721940C7B00001145 /* ConsumptionViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		76BCA0B921940E8E00001145 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0BA21940EB800001145 /* ConsumptionTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76BCA0C1219418C600001145 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0C2219418CA00001145 /* AddMonthBill */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		76BCA0C2219418CA00001145 /* AddMonthBill */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0C5219418E200001145 /* View */,
+				76BCA0C4219418DC00001145 /* VM */,
+				76BCA0C3219418D800001145 /* VC */,
+			);
+			path = AddMonthBill;
+			sourceTree = "<group>";
+		};
+		76BCA0C3219418D800001145 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0C6219419C000001145 /* AddMonthBillViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		76BCA0C4219418DC00001145 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0C821942EC000001145 /* AddMonthBillViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		76BCA0C5219418E200001145 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76BCA0CC21943BEE00001145 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA0CD21943C0600001145 /* ConsumptionItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F86B952DFE854358961E4AE4 /* Frameworks */ = {
@@ -1151,9 +1239,11 @@
 				76B16ADD217DA397007B7769 /* AddCreditCardViewController.swift in Sources */,
 				76B16ADF217DA397007B7769 /* ModifyCreditViewController.swift in Sources */,
 				76B16AE0217DA397007B7769 /* CreditManagerViewModel.swift in Sources */,
+				76BCA0CB21943A6500001145 /* String_Extension.swift in Sources */,
 				76B16AE3217DA397007B7769 /* CreditManagerTableViewCell.swift in Sources */,
 				76B16A8C217DA36A007B7769 /* PickerViewViewController.swift in Sources */,
 				76B16ADB217DA397007B7769 /* LoanManagerItem.swift in Sources */,
+				76BCA0BB21940EB800001145 /* ConsumptionTableViewCell.swift in Sources */,
 				76B16A6E217DA36A007B7769 /* Date+Extension.swift in Sources */,
 				76B16AE4217DA397007B7769 /* MeViewModel.swift in Sources */,
 				76B16A9C217DA36A007B7769 /* TextField.swift in Sources */,
@@ -1166,6 +1256,7 @@
 				76B16A69217DA36A007B7769 /* Array+Extensions.swift in Sources */,
 				76B16AEF217DC8CA007B7769 /* Singleton.swift in Sources */,
 				76B16A76217DA36A007B7769 /* Optional+Extensions.swift in Sources */,
+				76BCA0C921942EC000001145 /* AddMonthBillViewModel.swift in Sources */,
 				76B16A6D217DA36A007B7769 /* UIView+Extensions.swift in Sources */,
 				76B16AFB217DD139007B7769 /* LoginViewModel.swift in Sources */,
 				76B16A8D217DA36A007B7769 /* ContactsPickerViewController.swift in Sources */,
@@ -1216,6 +1307,8 @@
 				7615F45321817B400055A093 /* IDNameApiModel.swift in Sources */,
 				76B16AD6217DA397007B7769 /* ConsumptionViewController.swift in Sources */,
 				76B16A98217DA36A007B7769 /* LikeButtonCell.swift in Sources */,
+				76BCA0B821940C7B00001145 /* ConsumptionViewModel.swift in Sources */,
+				76BCA0BF219416C100001145 /* consumptionCreditApiModel.swift in Sources */,
 				76119B4D218045FA00AE56B8 /* ViewMdoelExtension.swift in Sources */,
 				76B16A6B217DA36A007B7769 /* UIImageView+Extensions.swift in Sources */,
 				76B16A85217DA36A007B7769 /* Assets.swift in Sources */,
@@ -1233,13 +1326,16 @@
 				76B16A72217DA36A007B7769 /* UIImage+Extensions.swift in Sources */,
 				76B16A97217DA36A007B7769 /* ItemWithPhoto.swift in Sources */,
 				76B16A70217DA36A007B7769 /* UITextView+Extensions.swift in Sources */,
+				76BCA0CE21943C0600001145 /* ConsumptionItem.swift in Sources */,
 				76B16AEA217DA397007B7769 /* RemindTableViewCell.swift in Sources */,
 				76B16AFE217DD1B0007B7769 /* LoginApiModel.swift in Sources */,
+				76BCA0D021943D7F00001145 /* StringExtensions.swift in Sources */,
 				76B16AD8217DA397007B7769 /* AddLoanViewController.swift in Sources */,
 				76B16A75217DA36A007B7769 /* UIAlertController+Extensions.swift in Sources */,
 				76B16AF2217DC9A7007B7769 /* LoginViewController.swift in Sources */,
 				76B16A77217DA36A007B7769 /* Common+Extensions.swift in Sources */,
 				76B16A68217DA36A007B7769 /* TableSectionModel.swift in Sources */,
+				76BCA0C7219419C000001145 /* AddMonthBillViewController.swift in Sources */,
 				76B16A94217DA36A007B7769 /* ItemWithImage.swift in Sources */,
 				76B16A7B217DA36A007B7769 /* TextViewController.swift in Sources */,
 				76B16A7F217DA36A007B7769 /* LocalePickerViewController.swift in Sources */,
@@ -1394,6 +1490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VZQ928P2N;
 				INFOPLIST_FILE = creditCaculatorNet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1413,6 +1510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VZQ928P2N;
 				INFOPLIST_FILE = creditCaculatorNet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -43,6 +43,26 @@ extension CreditManagerViewModel {
     
     func deleCard(id: Int) {
         
+        
+        APIRequestBool(requestType: APIExp.delAccount(id: id)).subscribe(onNext: { (result) in
+            switch result {
+            case .bool(let msg):
+                SZHUD(msg, type: .success, callBack: {
+                    self.credits()
+                })
+            case .fail(code: let code, msg: let msg):
+                self.netFailDeailWith(code: code, msg: msg, callBack: nil)
+            default:
+                break
+            }
+        }, onError: { (e) in
+            self.netErrorDealwith(e: e)
+        }).disposed(by: disposeBag)
+    }
+    
+    func bills() {
+        
+        
     }
 }
 

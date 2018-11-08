@@ -16,7 +16,7 @@ class RemindViewModel: SNBaseViewModel {
     
     let initSectionItems : [TableSectionModel<RemindItem>] = [
         TableSectionModel(title: "", items: [
-            RemindItem(bankName: "bankName", cardNum: "1234", date: "2018-08-08", value: "1000.00", status: "status")
+//            RemindItem(bankName: "bankName", cardNum: "1234", date: "2018-08-08", value: "1000.00", status: "status")
             ])
     ]
     

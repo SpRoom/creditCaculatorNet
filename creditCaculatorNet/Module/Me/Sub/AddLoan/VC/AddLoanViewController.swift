@@ -82,7 +82,7 @@ extension AddLoanViewController {
         
         nameV.set(title: "贷款名", placeholder: "请输入贷款名")
         totalValueV.set(title: "总计借款", placeholder: "总借款额度")
-        borrowDateV.set(title: "借款日", placeholder: "请输入借款日,20180808")
+        borrowDateV.set(title: "借款日", placeholder: "请输入借款日,如20180808")
         repayDateV.set(title: "还款日", placeholder: "请输入还款日")
         instalmentAmountV.set(title: "每期还款金额", placeholder: "请输入每期还款金额，使用,隔开")
         

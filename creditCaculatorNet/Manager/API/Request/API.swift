@@ -28,6 +28,9 @@ enum APIExp {
     case accountlist
     case accountInfo(id: Int)
     case editAccount(id: Int, accountTypeId:Int,name:String,cardNo:String,lines:Int,temporary:Int,userLines:Int,billDate:Int,reimsementDate:Int)
+    case delAccount(id:Int)
+    case addCreditMonthBill(accountId: Int, accountType: Int, money: Int, reimsementDate: TimeInterval)
+    case comsumptionCreditList
 }
 
 extension APIExp : JSONMappableTargetType {
@@ -66,6 +69,12 @@ extension APIExp : JSONMappableTargetType {
             return "/api/v1/account/account"
         case .editAccount:
             return "/api/v1/account/editAccount"
+        case .delAccount:
+            return "/api/v1/account/delAccount"
+        case .addCreditMonthBill:
+            return "/api/v1/bill/addCreditMonthBill"
+        case .comsumptionCreditList:
+            return "/api/v1/account/consumAccountList"
         }
     }
 

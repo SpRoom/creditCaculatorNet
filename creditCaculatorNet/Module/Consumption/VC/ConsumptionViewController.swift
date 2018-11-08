@@ -15,15 +15,19 @@ class ConsumptionViewController: SNBaseViewController {
     let table = SNBaseTableView()
     
     
-    let vmodel = RemindViewModel()
+    let vmodel = ConsumptionViewModel()
 
 }
 
 extension ConsumptionViewController {
     
+    override func loadData() {
+        vmodel.credits()
+    }
+    
     override func setupView() {
         
-        table.registers([RemindTableViewCell.self])
+        table.registers([ConsumptionTableViewCell.self])
         
         view.addSubview(table)
         
@@ -45,21 +49,31 @@ extension ConsumptionViewController {
         let dataSource = self.dataSource()
         vmodel.sectionRep1.bind(to: table.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
         
-        table.rx.modelSelected(RemindItem.self)
+        table.rx.modelSelected(ConsumptionItem.self)
             .subscribe(onNext: { (item) in
-                print("")
+                self.addMonthBill(item: item)
             }).disposed(by: disposeBag)
         
+        vmodel.jumpSubject.subscribe(onNext: { (vc,type) in
+            VCJump(VC: self, to: vc, type: type)
+        }).disposed(by: disposeBag)
+    }
+    
+    func addMonthBill(item: ConsumptionItem) {
+        
+        let vc = AddMonthBillViewController()
+        vc.set(bankName: item.bankName, accountType: item.accountType, accountId: item.id, cardNo: item.cardNo.bankCardNoValue)
+        self.vmodel.jumpSubject.onNext((vc,.push))
     }
 }
 extension ConsumptionViewController {
     
-    func dataSource() ->RxTableViewSectionedReloadDataSource<TableSectionModel<RemindItem>> {
+    func dataSource() ->RxTableViewSectionedReloadDataSource<TableSectionModel<ConsumptionItem>> {
         
-        return RxTableViewSectionedReloadDataSource<TableSectionModel<RemindItem>>(configureCell: { (ds, table, index, item) -> UITableViewCell in
+        return RxTableViewSectionedReloadDataSource<TableSectionModel<ConsumptionItem>>(configureCell: { (ds, table, index, item) -> UITableViewCell in
             
-            let cell : RemindTableViewCell = table.dequeueReusableCell(forIndexPath: index)
-            cell.set(bankName: item.bankName, carNumL: item.cardNum, date: item.date, value: item.value, status: item.status)
+            let cell : ConsumptionTableViewCell = table.dequeueReusableCell(forIndexPath: index)
+            cell.set(bankName: item.bankName, cardNo: item.cardNo, billDate: item.billDate, reimbursementDate: item.reimbursementDate, totalValue: item.totalValue, status: item.status, temporaryValue: item.temporaryValue)
             return cell
             
         })
