@@ -21,8 +21,6 @@
 		76B169FD217D803D007B7769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B169FB217D803D007B7769 /* Main.storyboard */; };
 		76B169FF217D803F007B7769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B169FE217D803F007B7769 /* Assets.xcassets */; };
 		76B16A02217D803F007B7769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B16A00217D803F007B7769 /* LaunchScreen.storyboard */; };
-		76B16A68217DA36A007B7769 /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16A11217DA369007B7769 /* TableSectionModel.swift */; };
-		76B16A9E217DA36A007B7769 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16A64217DA369007B7769 /* Const.swift */; };
 		76B16AD6217DA397007B7769 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AA2217DA396007B7769 /* ConsumptionViewController.swift */; };
 		76B16AD7217DA397007B7769 /* AddLoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AA7217DA397007B7769 /* AddLoanViewModel.swift */; };
 		76B16AD8217DA397007B7769 /* AddLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B16AA9217DA397007B7769 /* AddLoanViewController.swift */; };
@@ -117,6 +115,8 @@
 		76BCA16A219AB39F00001145 /* HLFNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA168219AB39F00001145 /* HLFNavigationController.swift */; };
 		76BCA16B219AB39F00001145 /* SNMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA169219AB39F00001145 /* SNMainTabBarController.swift */; };
 		76BCA16D219AB3D500001145 /* UIView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA16C219AB3D500001145 /* UIView_Extension.swift */; };
+		76BCA170219AB6B600001145 /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA16F219AB6B600001145 /* TableSectionModel.swift */; };
+		76BCA172219AB6BE00001145 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCA171219AB6BE00001145 /* Const.swift */; };
 		8987201E792190A82DDD96A9 /* Pods_creditCaculatorNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,8 +139,6 @@
 		76B169FE217D803F007B7769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76B16A01217D803F007B7769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76B16A03217D803F007B7769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76B16A11217DA369007B7769 /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
-		76B16A64217DA369007B7769 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Const.swift; path = ../../../../../Spectator/project/creditCalculatorRealm/creditCalculator/Utils/Const.swift; sourceTree = "<group>"; };
 		76B16AA2217DA396007B7769 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
 		76B16AA7217DA397007B7769 /* AddLoanViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanViewModel.swift; sourceTree = "<group>"; };
 		76B16AA9217DA397007B7769 /* AddLoanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +233,8 @@
 		76BCA168219AB39F00001145 /* HLFNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLFNavigationController.swift; sourceTree = "<group>"; };
 		76BCA169219AB39F00001145 /* SNMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNMainTabBarController.swift; sourceTree = "<group>"; };
 		76BCA16C219AB3D500001145 /* UIView_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Extension.swift; sourceTree = "<group>"; };
+		76BCA16F219AB6B600001145 /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
+		76BCA171219AB6BE00001145 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		FF307B5D1485CA5DD959E2B4 /* Pods_creditCaculatorNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_creditCaculatorNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -341,26 +341,17 @@
 		76B16A0C217DA349007B7769 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				76BCA171219AB6BE00001145 /* Const.swift */,
+				76BCA16E219AB6B600001145 /* Rx */,
 				76BCA16C219AB3D500001145 /* UIView_Extension.swift */,
 				76BCA167219AB39F00001145 /* Base */,
 				76BCA0E0219AB39300001145 /* AlertPickers */,
 				76BCA0CF21943D7F00001145 /* StringExtensions.swift */,
 				76BCA0CA21943A6500001145 /* String_Extension.swift */,
-				76B16A10217DA369007B7769 /* Rx */,
-				76B16A64217DA369007B7769 /* Const.swift */,
 				76B16AEE217DC8CA007B7769 /* Singleton.swift */,
 				76119B4C218045F900AE56B8 /* ViewMdoelExtension.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		76B16A10217DA369007B7769 /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				76B16A11217DA369007B7769 /* TableSectionModel.swift */,
-			);
-			name = Rx;
-			path = ../../../../../Spectator/project/creditCalculatorRealm/creditCalculator/Utils/Rx;
 			sourceTree = "<group>";
 		};
 		76B16AA0217DA396007B7769 /* Consumption */ = {
@@ -1076,6 +1067,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		76BCA16E219AB6B600001145 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				76BCA16F219AB6B600001145 /* TableSectionModel.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		F86B952DFE854358961E4AE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1284,7 +1283,6 @@
 				76BCA165219AB39300001145 /* TextField.swift in Sources */,
 				76BCA152219AB39300001145 /* SearchHistoryManager.swift in Sources */,
 				76B16AE1217DA397007B7769 /* CreditManagerViewController.swift in Sources */,
-				76B16A9E217DA36A007B7769 /* Const.swift in Sources */,
 				76BCA16D219AB3D500001145 /* UIView_Extension.swift in Sources */,
 				76B169F8217D803D007B7769 /* AppDelegate.swift in Sources */,
 				76BCA16B219AB39F00001145 /* SNMainTabBarController.swift in Sources */,
@@ -1321,8 +1319,10 @@
 				7615F44E21816F340055A093 /* LoanApiModel.swift in Sources */,
 				76BCA14C219AB39300001145 /* TwoTextFieldsViewController.swift in Sources */,
 				76BCA0CE21943C0600001145 /* ConsumptionItem.swift in Sources */,
+				76BCA172219AB6BE00001145 /* Const.swift in Sources */,
 				76BCA15C219AB39300001145 /* ImagePickerViewController.swift in Sources */,
 				76B16AEA217DA397007B7769 /* RemindTableViewCell.swift in Sources */,
+				76BCA170219AB6B600001145 /* TableSectionModel.swift in Sources */,
 				76B16AFE217DD1B0007B7769 /* LoginApiModel.swift in Sources */,
 				76BCA15E219AB39300001145 /* PhotoLayout.swift in Sources */,
 				76BCA0D021943D7F00001145 /* StringExtensions.swift in Sources */,
@@ -1333,7 +1333,6 @@
 				76BCA163219AB39300001145 /* SegmentedControl.swift in Sources */,
 				76BCA135219AB39300001145 /* UIViewController+Extensions.swift in Sources */,
 				76BCA161219AB39300001145 /* LikeButtonCell.swift in Sources */,
-				76B16A68217DA36A007B7769 /* TableSectionModel.swift in Sources */,
 				76BCA0C7219419C000001145 /* AddMonthBillViewController.swift in Sources */,
 				76BCA15F219AB39300001145 /* TelegramPickerViewController.swift in Sources */,
 				76BCA140219AB39300001145 /* Common+Extensions.swift in Sources */,
