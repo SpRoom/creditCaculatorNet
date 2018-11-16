@@ -29,9 +29,15 @@ class LoginViewController: SNBaseViewController {
     
 
     let vmodel = LoginViewModel()
+    
+    var popCallBack: (()->())?
 }
 
 extension LoginViewController {
+    
+    override func viewDisAppeared(_ animated: Bool) {
+        popCallBack?()
+    }
     
     override func setupView() {
         
@@ -69,9 +75,12 @@ extension LoginViewController {
     
     override func bindEvent() {
         
+        _ = usernameV.inputV.rx.textInput <-> vmodel.usernameRep
+        _ = passwordV.inputV.rx.textInput <-> vmodel.passwordRep
+        
         loginbtn.rx.tap
             .subscribe(onNext: {
-                self.vmodel.loginSuccess()
+                self.vmodel.login()
             }).disposed(by: disposeBag)
     }
 }

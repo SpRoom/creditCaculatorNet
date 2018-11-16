@@ -16,6 +16,6 @@ struct LoginApiModel: SNSwiftyJSONAble {
     var token: String
     
      init?(jsonData: JSON) {
-        self.token = jsonData["token"].stringValue
+        self.token = jsonData["accessToken"].stringValue
     }
 }

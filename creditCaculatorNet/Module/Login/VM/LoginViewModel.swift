@@ -8,21 +8,42 @@
 
 import UIKit
 import SNSwiftPackage
+import RxCocoa
 
 class LoginViewModel: SNBaseViewModel {
 
-   
-
+   let usernameRep = BehaviorRelay(value: "")
+    let passwordRep = BehaviorRelay(value: "")
 }
 
 extension LoginViewModel {
     
-    
-    func loginSuccess(model: LoginApiModel? = nil) {
+    func login() {
         
-//        Singleton.shared.token = model.token
-        Singleton.shared.token = "66UXJBkuwSs1t1_6yrTZH1CgMFSqhuu-hKInLwcaG5Y"
+        let username = usernameRep.value
+        let password = passwordRep.value
+        
+        APIRequest(requestType: APIExp.login(username: username, password: password), modelType: LoginApiModel.self).subscribe(onNext: { (result) in
+            switch result {
+            case .success(let model):
+                self.loginSuccess(model: model)
+            case let .fail(code, msg):
+                self.netFailDeailWith(code: code, msg: msg, callBack: nil)
+            default:
+                break
+            }
+        }, onError: { (e) in
+            self.netErrorDealwith(e: e)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+    func loginSuccess(model: LoginApiModel) {
+        
+        Singleton.shared.token = model.token
+//        Singleton.shared.token = "66UXJBkuwSs1t1_6yrTZH1CgMFSqhuu-hKInLwcaG5Y"
         Singleton.shared.refreshToken()
+        SNBaseViewModel.isCanJumpLogin = true
         
         let window = UIApplication.shared.keyWindow
         

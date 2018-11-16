@@ -13,11 +13,21 @@ import RxDataSources
 class AddCreditCardViewController: SNBaseViewController {
 
     let bankNameV = AuthTitleInputView()
-    let cardNoV = AuthTitleInputView()
-    let totalLinesV = AuthTitleInputView()
-    let temporaryLinesV = AuthTitleInputView()
-    let billDateV = AuthTitleInputView()
-    let reimsementV = AuthTitleInputView()
+    let cardNoV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .numberPad
+    }
+    let totalLinesV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .decimalPad
+    }
+    let temporaryLinesV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .decimalPad
+    }
+    let billDateV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .numberPad
+    }
+    let reimsementV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .numberPad
+    }
     let accountTypeV = TitleTapSelectView()
 
     let vmodel = AddCreditCardViewModel()
@@ -143,6 +153,8 @@ extension AddCreditCardViewController {
 
     
     @objc func typeselected() {
+        
+        self.resignFirstResponder()
         
         let tap = UIButton().then {
             $0.backgroundColor = UIColor(white: 0, alpha: 0.6)

@@ -43,6 +43,10 @@ extension RemindViewController {
         
         let dataSource = self.dataSource()
         vmodel.sectionRep1.bind(to: table.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        
+        vmodel.jumpSubject.subscribe(onNext: { (vc,type) in
+            VCJump(VC: self, to: vc, type: type)
+        }).disposed(by: disposeBag)
     }
     
     override func loadData() {

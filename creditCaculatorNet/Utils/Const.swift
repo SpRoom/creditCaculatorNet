@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import SNSwiftPackage
 
-let baseUrl = "http://192.168.0.112:8080"
+let baseUrl = "http://creditcacu.speczhu.tk:8001"
 
 let color_black_717580 = Color(0x717580)
 let color_gray_ccc = Color(0xcccccc)

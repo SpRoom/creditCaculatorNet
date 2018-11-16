@@ -15,17 +15,17 @@ extension SNBaseViewModel {
     
     func netFailDeailWith(code: String, msg: String, callBack: (()->())?) {
         
-        if code == "99" {
-            if isCanJumpLogin {
+        if code == "1008" {
+            if SNBaseViewModel.isCanJumpLogin {
                 SZHUD("请先登录", type: .info, callBack: nil)
-                isCanJumpLogin = false
-                let vc = LoginViewController()
+                SNBaseViewModel.isCanJumpLogin = false
+//                let vc = LoginViewController()
 //                vc.state = .login
 //                vc.popCallBack = {
 //                    self.isCanJumpLogin = true
 //                }
-                self.jumpSubject.onNext((vc,.push))
-                
+//                self.jumpSubject.onNext((vc,.push))
+                logOut()
             }
         } else {
             
