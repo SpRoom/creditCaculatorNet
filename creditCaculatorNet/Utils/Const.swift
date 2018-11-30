@@ -12,6 +12,7 @@ import RxSwift
 import SNSwiftPackage
 
 let baseUrl = "http://creditcacu.speczhu.tk:8001"
+let baseUrl2 = "http://192.168.0.113:8001"
 
 let color_black_717580 = Color(0x717580)
 let color_gray_ccc = Color(0xcccccc)

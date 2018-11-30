@@ -63,9 +63,13 @@ extension MeViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
+        if name == "设备管理" {
+            let vc = POSManagerViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         if name == "月账单统计" {
             self.vmodel.logOut()
-        
         }
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import SNSwiftPackage
 import RxDataSources
+import IQKeyboardManager
 
 class AddCreditCardViewController: SNBaseViewController {
 
@@ -154,7 +155,8 @@ extension AddCreditCardViewController {
     
     @objc func typeselected() {
         
-        self.resignFirstResponder()
+//        self.view.resignFirstResponder()
+        IQKeyboardManager.shared().resignFirstResponder()
         
         let tap = UIButton().then {
             $0.backgroundColor = UIColor(white: 0, alpha: 0.6)

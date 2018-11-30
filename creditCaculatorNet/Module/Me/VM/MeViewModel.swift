@@ -19,6 +19,7 @@ class MeViewModel: SNBaseViewModel {
         TableSectionModel(title: "", items: [
             MeItem.info(name: "银行卡管理"),
             MeItem.info(name: "贷款管理"),
+            MeItem.info(name: "设备管理"),
             MeItem.info(name: "月账单统计")
             ])
     ]

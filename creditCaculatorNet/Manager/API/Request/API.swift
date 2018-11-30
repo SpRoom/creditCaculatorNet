@@ -31,6 +31,9 @@ enum APIExp {
     case delAccount(id:Int)
     case addCreditMonthBill(accountId: Int, accountType: Int, money: Int, reimsementDate: TimeInterval)
     case comsumptionCreditList
+    case addPos(name: String)
+    case posList
+    case addConsumptionBill(accountId: Int,consumptionType: Int, money: Int, consumptionDate: TimeInterval,device:Int,remark: String)
 }
 
 extension APIExp : JSONMappableTargetType {
@@ -40,7 +43,7 @@ extension APIExp : JSONMappableTargetType {
     }
     
     var baseURL: URL {
-        return URL(string:baseUrl)!
+        return URL(string:baseUrl2)!
     }
     
     var path: String {
@@ -75,6 +78,12 @@ extension APIExp : JSONMappableTargetType {
             return "/api/v1/bill/addCreditMonthBill"
         case .comsumptionCreditList:
             return "/api/v1/account/consumAccountList"
+        case .addConsumptionBill:
+            return "/api/v1/bill/addConsumptionBill"
+        case .addPos:
+            return "/api/v1/bill/addPos"
+        case .posList:
+            return "/api/v1/bill/poslist"
         }
     }
 

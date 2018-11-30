@@ -40,7 +40,7 @@ extension AddMonthBillViewModel {
             switch result {
             case .bool(msg: let msg):
                 SZHUD(msg, type: .success, callBack: {
-                
+                    self.jumpSubject.onNext((nil,.pop))
                 })
             case .fail(code: let code, msg: let msg):
                 self.netFailDeailWith(code: code, msg: msg, callBack: nil)

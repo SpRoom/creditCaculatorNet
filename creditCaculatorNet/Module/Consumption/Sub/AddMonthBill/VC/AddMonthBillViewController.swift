@@ -14,8 +14,12 @@ class AddMonthBillViewController: SNBaseViewController {
     let nameV = TitleTapSelectView()
     let accountTypeV = TitleTapSelectView()
     let cardNoV = TitleTapSelectView()
-    let moneyV = AuthTitleInputView()
-    let reimsementV = AuthTitleInputView()
+    let moneyV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .decimalPad
+    }
+    let reimsementV = AuthTitleInputView().then {
+        $0.fieldV.keyboardType = .numberPad
+    }
     
     let vmodel = AddMonthBillViewModel()
 
@@ -36,6 +40,8 @@ extension AddMonthBillViewController {
     }
     
     override func setupView() {
+        
+        title = "添加月账单"
         
         view.addSubviews(views: [nameV,accountTypeV,cardNoV,moneyV,reimsementV,commitBtn])
         
