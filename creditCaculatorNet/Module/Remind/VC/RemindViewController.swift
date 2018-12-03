@@ -47,10 +47,36 @@ extension RemindViewController {
         vmodel.jumpSubject.subscribe(onNext: { (vc,type) in
             VCJump(VC: self, to: vc, type: type)
         }).disposed(by: disposeBag)
+        
+        table.rx.modelSelected(RemindItem.self).subscribe(onNext: { (item) in
+            self.sheetAction(item: item)
+        }).disposed(by: disposeBag)
     }
     
     override func loadData() {
         vmodel.reminds()
+    }
+    
+    func sheetAction(item: RemindItem) {
+        
+        let alert = UIAlertController()
+        alert.addAction(image: nil, title: "还款", color: nil, style: .default, isEnabled: true) { (action) in
+//            self.addConsumptionBill(item: item)
+            self.repay(item: item)
+        }
+      
+        alert.addAction(image: nil, title: "取消", color: nil, style: .cancel, isEnabled: true) { (action) in
+            
+        }
+        
+        alert.show()
+    }
+    
+    func repay(item: RemindItem) {
+        
+        let vc = RepayViewController()
+        
+        self.vmodel.jumpSubject.onNext((vc,.push))
     }
 }
 extension RemindViewController {

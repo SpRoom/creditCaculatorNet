@@ -34,6 +34,7 @@ enum APIExp {
     case addPos(name: String)
     case posList
     case addConsumptionBill(accountId: Int,consumptionType: Int, money: Int, consumptionDate: TimeInterval,device:Int,remark: String)
+    case repay(billId: Int, money: Int)
 }
 
 extension APIExp : JSONMappableTargetType {
@@ -43,7 +44,7 @@ extension APIExp : JSONMappableTargetType {
     }
     
     var baseURL: URL {
-        return URL(string:baseUrl2)!
+        return URL(string:baseUrl)!
     }
     
     var path: String {
@@ -84,6 +85,8 @@ extension APIExp : JSONMappableTargetType {
             return "/api/v1/bill/addPos"
         case .posList:
             return "/api/v1/bill/poslist"
+        case .repay:
+            return "/api/v1/bill/repay"
         }
     }
 

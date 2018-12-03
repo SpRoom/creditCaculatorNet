@@ -140,6 +140,10 @@ extension AddConsumptionBillViewController {
             .subscribe(onNext: {
                 self.vmodel.add()
             }).disposed(by: disposeBag)
+        
+        vmodel.jumpSubject.subscribe(onNext: { (vc,type) in
+            VCJump(VC: self, to: vc, type: type)
+        }).disposed(by: disposeBag)
     }
 }
 
