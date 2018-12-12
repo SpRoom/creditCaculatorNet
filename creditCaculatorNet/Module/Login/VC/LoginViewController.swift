@@ -10,6 +10,9 @@ import UIKit
 import SNSwiftPackage
 
 class LoginViewController: SNBaseViewController {
+    
+    var vmodel: LoginViewModel = LoginViewModel()
+    
 
     let logoV = UIImageView().then {
         $0.image = Image("logo")
@@ -26,9 +29,6 @@ class LoginViewController: SNBaseViewController {
     let loginbtn = BGButton().then {
         $0.set(content: "登录")
     }
-    
-
-    let vmodel = LoginViewModel()
     
     var popCallBack: (()->())?
 }

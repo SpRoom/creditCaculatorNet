@@ -70,7 +70,7 @@ extension RepayViewModel {
     
     func repay() {
         
-        guard billId < 0 else {
+        guard billId > 0 else {
             
             SZHUD("账户id异常", type: .info, callBack: nil)
             return

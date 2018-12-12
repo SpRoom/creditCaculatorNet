@@ -21,6 +21,7 @@ enum APIExp {
     case changePassord(username: String, password: String, newPassword: String)
     case exit
     case bills
+    case remindbills
     case addLoan(name: String,lines: Int,reimsementDate:Int,borrowDate:TimeInterval,instaments: String)
     case loans
     case addAccount(accountTypeId: Int, name: String, cardNo: String, lines: Int, temporary: Int, billDate: Int, reimsementDate: Int)
@@ -59,6 +60,8 @@ extension APIExp : JSONMappableTargetType {
             return "/api/v1/exit"
         case .bills:
             return "/api/v1/bill/bills"
+        case .remindbills:
+            return "/api/v1/bill/remindbills"
         case .addLoan:
             return "/api/v1/loan/addLoan"
         case .loans:

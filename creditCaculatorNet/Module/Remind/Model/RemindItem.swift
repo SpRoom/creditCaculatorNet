@@ -14,5 +14,6 @@ struct RemindItem : SectionItemType {
     var cardNum : String
     var date: String
     var value: String
-    var status: String 
+    var status: String
+    var billId: Int
 }

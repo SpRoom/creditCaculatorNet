@@ -31,12 +31,12 @@ class RepayViewController: SNBaseViewController {
 
 extension RepayViewController {
     
-    func set(cardNo: String, name: String, money: String) {
+    func set(cardNo: String, name: String, money: String,billId: Int) {
         self.vmodel.nameRep <= name
         self.vmodel.cardnoRep <= cardNo
         self.vmodel.maxMoney = yuanToPoint(value: money)
         self.vmodel.moneyRep <= money
-        
+        self.vmodel.billId = billId
     }
     
     override func setupView() {

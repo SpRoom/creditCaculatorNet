@@ -27,7 +27,7 @@ extension RemindViewModel {
     
     func reminds() {
         
-        APIRequest(requestType: APIExp.bills, modelType: [BillsApiModel.self]).subscribe(onNext: { (result) in
+        APIRequest(requestType: APIExp.remindbills, modelType: [BillsApiModel.self]).subscribe(onNext: { (result) in
             switch result {
             case .success(let model):
                 self.parse(models: model)
@@ -58,7 +58,7 @@ extension RemindViewModel {
        let date = getTimeBy(timeStamp: "\(model.reimnursementDate)", format: "MM-dd")
         let money = String(format: "%.2f", Float(model.money)/100)
 
-        var item : RemindItem! = RemindItem(bankName: model.accountName, cardNum: model.accountNo, date: date, value: money, status: model.status == 0 ? "未还" : "已还")
+        var item : RemindItem! = RemindItem(bankName: model.accountName, cardNum: model.accountNo, date: date, value: money, status: model.status == 0 ? "未还" : "已还", billId: model.id)
         
         
         return item

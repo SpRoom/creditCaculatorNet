@@ -75,7 +75,7 @@ extension RemindViewController {
     func repay(item: RemindItem) {
         
         let vc = RepayViewController()
-        
+        vc.set(cardNo: item.cardNum.bankCardNoValue, name: item.bankName, money: item.value, billId: item.billId)
         self.vmodel.jumpSubject.onNext((vc,.push))
     }
 }
